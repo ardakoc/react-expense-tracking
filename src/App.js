@@ -23,9 +23,14 @@ function App(props) {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  function addExpenseHandler(expense) {
+    console.log(expense);
+  }
+
   return (
     <section>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </section>
   );
