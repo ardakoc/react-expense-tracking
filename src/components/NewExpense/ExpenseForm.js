@@ -45,7 +45,7 @@ function ExpenseForm(props) {
           <label>Amount</label>
           <input
             type="number"
-            value={amount} 
+            value={amount}
             min="0.01"
             step="0.01"
             onChange={amountChangeHandler}
@@ -63,6 +63,13 @@ function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button
+          className="cancel-btn"
+          type="button"
+          onClick={props.onCollapseForm}
+        >
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
